@@ -3,6 +3,7 @@
 
 __version__ = '0.1.0'
 __author__ = 'HakurouKen'
+__description__ = 'A Simple json renderer for django.'
 __license__ = 'MIT'
 
 from django.core.serializers.json import DjangoJSONEncoder
