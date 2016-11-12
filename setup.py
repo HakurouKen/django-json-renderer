@@ -1,11 +1,16 @@
 from distutils.core import setup
-
+import os
 import renderer
+
+if os.path.exists('README.rst'):
+    with open('README.rst') as f:
+        long_description = f.read()
 
 setup(
     name = 'django-json-renderer',
     version = renderer.__version__,
     description = renderer.__description__,
+    long_description = long_description,
     author = renderer.__author__,
     author_email = 'ticshot@gmail.com',
     url = 'https://github.com/HakurouKen/django-render-json',
