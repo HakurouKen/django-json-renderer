@@ -5,25 +5,29 @@ A Simple json renderer for django.
 
 Install
 -------
+::
 
     pip install django-json-renderer
 
 Api
 ---
+.. role:: python(code)
+    :language: python
 
-`JsonResponse`: Native Django `JsonResponse` (or it’s polyfill).
+:python:`JsonResponse` Native Django :python:`JsonResponse` (or it’s polyfill).
 
-`ModelJSONEncoder`: Inherit from `DjangoJSONEncoder`, extends the parser
-of `QuerySet`(using `list(queryset.values())`) and `Models`(using
-`model_to_dict`).
+:python:`ModelJSONEncoder`  Inherit from :python:`DjangoJSONEncoder`, extends the parser
+of :python:`QuerySet` (using :python:`list(queryset.values())`) and :python:`Models` (using
+:python:`model_to_dict`).
 
-`render_json(encoder=ModelJSONEncoder,safe=True,**kwargs)`: Return the
+:python:`render_json(encoder=ModelJSONEncoder,safe=True,**kwargs)`  Return the
 decorator that convert json-serializable to JsonResponse (using
-`ModelJSONEncoder` as default). `encoder` and `safe` params has the same
-meaning as [Django JsonResponse].
+:python:`ModelJSONEncoder` as default). :python:`encoder` and :python:`safe` params has the same
+meaning as `Django JsonResponse <https://docs.djangoproject.com/en/1.10/ref/request-response/#jsonresponse-objects>`_.
 
 Example
 -------
+.. code-block:: python
 
     from django.db import models
     from django_json_encoder import render_json
@@ -44,5 +48,3 @@ License
 -------
 
 MIT
-
-  [Django JsonResponse]: https://docs.djangoproject.com/en/1.10/ref/request-response/#jsonresponse-objects
