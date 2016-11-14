@@ -11,18 +11,20 @@ Install
 
 Api
 ---
-.. role:: python(code)
-    :language: python
+``JsonResponse`` : 
 
-:python:`JsonResponse` Native Django :python:`JsonResponse` (or it’s polyfill).
+Native Django ``JsonResponse`` (or it’s polyfill).
 
-:python:`ModelJSONEncoder`  Inherit from :python:`DjangoJSONEncoder`, extends the parser
-of :python:`QuerySet` (using :python:`list(queryset.values())`) and :python:`Models` (using
-:python:`model_to_dict`).
+``ModelJSONEncoder`` :
 
-:python:`render_json(encoder=ModelJSONEncoder,safe=True,**kwargs)`  Return the
+Inherit from ``DjangoJSONEncoder``, extends the parser
+of :python:``QuerySet`` (using ``list(queryset.values())``) and ``Models`` (using ``model_to_dict``).
+
+``render_json(encoder=ModelJSONEncoder, safe=True, **kwargs)`` :
+
+Return the
 decorator that convert json-serializable to JsonResponse (using
-:python:`ModelJSONEncoder` as default). :python:`encoder` and :python:`safe` params has the same
+``ModelJSONEncoder`` as default). ``encoder`` and ``safe`` params has the same
 meaning as `Django JsonResponse <https://docs.djangoproject.com/en/1.10/ref/request-response/#jsonresponse-objects>`_.
 
 Example
@@ -41,7 +43,8 @@ Example
         return Person.objects.all().first()
 
     ## `safe` params
-    @render_json(safe=False):
+    @render_json(safe=False)
+    def get_all_person(request):
         return Person.objects.all()
 
 License
