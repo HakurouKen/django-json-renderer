@@ -11,17 +11,17 @@ Install
 
 Api
 ---
-``JsonResponse`` : 
-
+``JsonResponse``
+>>>>>>>>>>>>>>>>
 Native Django ``JsonResponse`` (or it’s polyfill).
 
-``ModelJSONEncoder`` :
-
+``ModelJSONEncoder``
+>>>>>>>>>>>>>>>>>>>>
 Inherit from ``DjangoJSONEncoder``, extends the parser
-of :python:``QuerySet`` (using ``list(queryset.values())``) and ``Models`` (using ``model_to_dict``).
+of ``QuerySet`` (using ``list(queryset.values())``) and ``Models`` (using ``model_to_dict``).
 
-``render_json(encoder=ModelJSONEncoder, safe=True, **kwargs)`` :
-
+``render_json(encoder=ModelJSONEncoder, safe=True, **kwargs)``
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Return the
 decorator that convert json-serializable to JsonResponse (using
 ``ModelJSONEncoder`` as default). ``encoder`` and ``safe`` params has the same
