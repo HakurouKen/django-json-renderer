@@ -15,6 +15,9 @@ setup(
     author_email = 'ticshot@gmail.com',
     url = 'https://github.com/HakurouKen/django-render-json',
     py_modules = ['django_json_renderer'],
+    install_requires = [
+        "django>=1.6"
+    ],
     classifiers = [
         'License :: OSI Approved :: MIT License',
         'Framework :: Django :: 1.6',
