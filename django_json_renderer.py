@@ -5,7 +5,7 @@
 A simple json renderer for django.
 '''
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 __author__ = 'HakurouKen'
 __description__ = 'A Simple json renderer for django.'
 __license__ = 'MIT'
